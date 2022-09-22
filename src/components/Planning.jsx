@@ -1,7 +1,7 @@
 
-import { Box, Checkbox, FormControlLabel, FormGroup, FormLabel, styled, Radio, RadioGroup, Slider, Typography } from '@mui/material'
+import { Box, Checkbox, FormControlLabel, FormGroup, FormLabel, Typography } from '@mui/material'
 import React from 'react'
-import { Controller, useFormContext } from 'react-hook-form'
+import RadioAndSliderComp from './RadioAndSliderComp';
 
 const Planning = ({
   planningChecked,
@@ -13,17 +13,6 @@ const Planning = ({
   planning2ndSliderValue,
   setPlanning2ndSliderValue,
 }) => {
-  const { control } = useFormContext;
-
-  const StyledSlider = styled(Slider)(
-    ({ theme }) => `
-    height: ${theme.spacing(2)};
-  `,
-  );
-
-  const calculatevalue = (value) => {
-    return value;
-  }
 
   const planning1stSliderHandleChange = (event, newValue) => {
     if (typeof newValue === 'number') {
@@ -36,17 +25,6 @@ const Planning = ({
       setPlanning2ndSliderValue(newValue);
     }
   };
-
-  const marks = [
-    {
-      value: 0,
-      label: '0',
-    },
-    {
-      value: 4,
-      label: '4',
-    },
-  ];
 
   return (
     <Box
@@ -78,97 +56,26 @@ const Planning = ({
 
                   <Box sx={{ m: '2rem 0 1rem'}}>
                     <Typography fontWeight='bold' sx={{ mb: '1.5rem'}}>What are the hazards and risks?</Typography>
-                    <Typography>Presence of hazardous material - Lead and / or Asbestos :<span style={{color: 'red'}}>Is it a risk at this site?</span></Typography>
 
-                    <RadioGroup
-                      row
-                      aria-labelledby='hazards and risks'
-                      value={planningRadioClicked}
-                    >
-                      <FormControlLabel 
-                        value="yes" 
-                        control={<Radio />}
-                        label="Yes" 
-                        sx={{ mr: '20px'}}
-                        onClick={(e) => setPlanningRadioClicked('yes')} />
-                      <FormControlLabel 
-                        value="no" 
-                        control={<Radio />} 
-                        label="No"
-                        onClick={(e) => setPlanningRadioClicked('no')} />
-                    </RadioGroup>
-
-                    {
-                      planningChecked && planningRadioClicked === 'yes' && (
-                        <Box sx={{ m: '2rem 0 0'}}>
-                          <Typography
-                            sx={{ mb: '1rem'}}
-                          >Inherent Risk Rating - (Presence of hazardous material - Lead and / or Asbestos)</Typography>
-
-                          <Box sx={{width: '60%'}}>
-                            <Controller
-                              control={control}
-                              name='planning inherent risk taking lead/asbestos'
-                              render={({ field }) => (
-                                <StyledSlider
-                                  value={planning1stSliderValue}
-                                  min={0}
-                                  step={1}
-                                  max={4}
-                                  scale={calculatevalue}
-                                  onChange={planning1stSliderHandleChange}
-                                  valueLabelDisplay="auto"
-                                  aria-labelledby="non-linear-slider"
-                                  key={`slider-${planning1stSliderValue}`}
-                                  marks={marks}
-                                  {...field}
-                                />
-                              )}
-                            />
-                          </Box>
-
-                          <Box>
-                            <Typography sx={{
-                                fontWeight: 'bold', color: 'rgb(25, 118, 210)'
-                              }}>How will the hazards and risk be controlled?</Typography>
-
-                              <Box sx={{
-                                m: '1rem 0',
-                              }}>
-                                <Typography sx={{ mb: '1rem', fontWeight: 'bold' }}>Review site hazardous materials register, follow internal safe work processes and practices for working with or surrounding these materials</Typography>
-                              </Box>
-
-                              <Typography
-                                sx={{ mb: '1rem'}}
-                              >
-                                Residual Risk Rating - (Presence of Hazardous materials)
-                              </Typography>
-
-                              <Box sx={{width: '60%'}}>
-                                <Controller
-                                  control={control}
-                                  name='planning residual risk taking Hazardous materials'
-                                  render={({ field }) => (
-                                    <StyledSlider
-                                      value={planning2ndSliderValue}
-                                      min={0}
-                                      step={1}
-                                      max={4}
-                                      scale={calculatevalue}
-                                      onChange={planning2ndSliderHandleChange}
-                                      valueLabelDisplay="auto"
-                                      aria-labelledby="non-linear-slider"
-                                      key={`slider-${planning2ndSliderValue}`}
-                                      marks={marks}
-                                      {...field}
-                                    />
-                                  )}
-                                />
-                              </Box>
-                          </Box>
-                        </Box>
-                      )
-                    }
+                    <RadioAndSliderComp
+                      titleNormal='Presence of hazardous material - Lead and / or Asbestos :'
+                      titleRed='Is it a risk at this site?'
+                      radioGetter={planningRadioClicked}
+                      radioSetter={setPlanningRadioClicked}
+                      trueCheck={planningChecked}
+                      radioBotQ=''
+                      radioBotText = ''
+                      slider1Title='Inherent Risk Rating - (Presence of hazardous material - Lead and / or Asbestos)'
+                      name1='planning inherent risk taking lead/asbestos'
+                      firstSliderValue={planning1stSliderValue}
+                      firstSliderHandleChange={planning1stSliderHandleChange}
+                      betweenQ='How will the hazards and risk be controlled?'
+                      betweenText='Review site hazardous materials register, follow internal safe work processes and practices for working with or surrounding these materials'
+                      slider2Title='Residual Risk Rating - (Presence of Hazardous materials)'
+                      name2='planning residual risk taking Hazardous materials'
+                      secondSliderValue={planning2ndSliderValue}
+                      secondSliderHandleChange={planning2ndSliderHandleChange}
+                    />
                   </Box>
                 </Box>
               )

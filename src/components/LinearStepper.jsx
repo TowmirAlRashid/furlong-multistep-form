@@ -57,6 +57,28 @@ const LinearStepper = () => {
     const [planning1stSliderValue, setPlanning1stSliderValue] = useState(0)
     const [planning2ndSliderValue, setPlanning2ndSliderValue] = useState(0)
 
+    //transporting component states
+    const [transportingTopChecked, setTransportingTopChecked] = useState(false)
+    const [transportingMiddleChecked, setTransportingMiddleChecked] = useState(false)
+    const [transportingBottomChecked, setTransportingBottomChecked] = useState(false)
+
+    const [transportingTop1stRadioClicked, setTransportingTop1stRadioClicked] = useState('no')
+    const [transportingTop2ndRadioClicked, setTransportingTop2ndRadioClicked] = useState('no')
+    const [transportingMiddleRadioClicked, setTransportingMiddleRadioClicked] = useState('no')
+    const [transportingBottom1stRadioClicked, setTransportingBottom1stRadioClicked] = useState('no')
+    const [transportingBottom2ndRadioClicked, setTransportingBottom2ndRadioClicked] = useState('no')
+
+    const [transportTop1st1stSliderValue, setTransportTop1st1stSliderValue] = useState(0)
+    const [transportTop1st2ndSliderValue, setTransportTop1st2ndSliderValue] = useState(0)
+    const [transportTop2nd1stSliderValue, setTransportTop2nd1stSliderValue] = useState(0)
+    const [transportTop2nd2ndSliderValue, setTransportTop2nd2ndSliderValue] = useState(0)
+    const [transportMiddle1stSliderValue, setTransportMiddle1stSliderValue] = useState(0)
+    const [transportMiddle2ndSliderValue, setTransportMiddle2ndSliderValue] = useState(0)
+    const [transportBottom1st1stSliderValue, setTransportBottom1st1stSliderValue] = useState(0)
+    const [transportBottom1st2ndSliderValue, setTransportBottom1st2ndSliderValue] = useState(0)
+    const [transportBottom2nd1stSliderValue, setTransportBottom2nd1stSliderValue] = useState(0)
+    const [transportBottom2nd2ndSliderValue, setTransportBottom2nd2ndSliderValue] = useState(0)
+
 
 
     const getStepContent = (step) => {
@@ -99,7 +121,42 @@ const LinearStepper = () => {
                     setPlanning2ndSliderValue={setPlanning2ndSliderValue}
                 />
             case 3:
-                return <Transporting />
+                return <Transporting
+                    transportingTopChecked={transportingTopChecked}
+                    setTransportingTopChecked={setTransportingTopChecked}
+                    transportingMiddleChecked={transportingMiddleChecked}
+                    setTransportingMiddleChecked={setTransportingMiddleChecked}
+                    transportingBottomChecked={transportingBottomChecked}
+                    setTransportingBottomChecked={setTransportingBottomChecked}
+                    
+                    transportingTop1stRadioClicked={transportingTop1stRadioClicked}
+                    setTransportingTop1stRadioClicked={setTransportingTop1stRadioClicked}
+                    transportingTop2ndRadioClicked={transportingTop2ndRadioClicked}
+                    setTransportingTop2ndRadioClicked={setTransportingTop2ndRadioClicked}
+                    transportingMiddleRadioClicked={transportingMiddleRadioClicked}
+                    setTransportingMiddleRadioClicked={setTransportingMiddleRadioClicked}
+                    transportingBottom1stRadioClicked={transportingBottom1stRadioClicked}
+                    setTransportingBottom1stRadioClicked={setTransportingBottom1stRadioClicked}
+                    transportingBottom2ndRadioClicked={transportingBottom2ndRadioClicked}
+                    setTransportingBottom2ndRadioClicked={setTransportingBottom2ndRadioClicked}
+
+                    transportTop1st1stSliderValue={transportTop1st1stSliderValue}
+                    setTransportTop1st1stSliderValue={setTransportTop1st1stSliderValue}
+                    transportTop1st2ndSliderValue={transportTop1st2ndSliderValue}
+                    setTransportTop1st2ndSliderValue={setTransportTop1st2ndSliderValue}
+                    transportTop2nd1stSliderValue={transportTop2nd1stSliderValue}
+                    setTransportTop2nd1stSliderValue={setTransportTop2nd1stSliderValue}
+                    transportTop2nd2ndSliderValue={transportTop2nd2ndSliderValue}
+                    setTransportTop2nd2ndSliderValue={setTransportTop2nd2ndSliderValue}
+                    transportMiddle1stSliderValue={transportMiddle1stSliderValue}
+                    setTransportMiddle1stSliderValue={setTransportMiddle1stSliderValue}
+                    transportMiddle2ndSliderValue={transportMiddle2ndSliderValue}
+                    setTransportMiddle2ndSliderValue={setTransportMiddle2ndSliderValue}
+                    // transportBottom1stSliderValue={transportBottom1stSliderValue}
+                    // setTransportBottom1stSliderValue={setTransportBottom1stSliderValue}
+                    // transportBottom2ndSliderValue={transportBottom2ndSliderValue}
+                    // setTransportBottom2ndSliderValue={setTransportBottom2ndSliderValue}
+                />
             case 4:
                 return <AreaSetup />
             case 5:
@@ -147,6 +204,12 @@ const LinearStepper = () => {
             'worksite inherent risk taking dermatitis': '',
             'worksite residual risk taking dermatitis': '',
             'planning inherent risk taking lead/asbestos': '',
+            'planning residual risk taking Hazardous materials': '',
+            'transporting inherent risk unsecured container': '',
+            'transporting unsecured container residual risk': '',
+            'transporting inherent risk taking': "",
+            'transporting inherent risk taking flying objects': '',
+            'transporting residual risk taking flying objects': '',
         }
     })
 
