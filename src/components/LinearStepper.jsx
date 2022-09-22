@@ -34,38 +34,93 @@ const getSteps = () => {
 }
 
 
-const getStepContent = (step) => {
-    switch(step) {
-        case 0: 
-            return <ProjectInfo />
-        case 1:
-            return <WorkSite />
-        case 2:
-            return <Planning />
-        case 3:
-            return <Transporting />
-        case 4:
-            return <AreaSetup />
-        case 5:
-            return <SurfacePrep />
-        case 6:
-            return <Noise />
-        case 7:
-            return <Electrical />
-        case 8:
-            return <WorkEnv />
-        case 9:
-            return <Danger />
-        case 10:
-            return <Completion />
-        case 11:
-            return <Submission />
-        default:
-            return 'Unknown Step'
-    }
-}
+
 
 const LinearStepper = () => {
+    //worksite component states
+    const [topChecked, setTopChecked] = useState(false)
+    const [topRadioClicked, setTopRadioClicked] = useState('no')
+    const [topSliderValue, setTopSliderValue] = useState(0)
+
+    const [top2ndSliderValue, setTop2ndSliderValue] = useState(0)
+
+    const [bottomChecked, setBottomChecked] = useState(false)
+    const [bottomRadioClicked, setBottomRadioClicked] = useState('no')
+    const [bottom1stSliderValue, setBottom1stSliderValue] = useState(0)
+
+    const [bottom2ndSliderValue, setBottom2ndSliderValue] = useState(0)
+
+    //planning component states
+    const [planningChecked, setPlanningChecked] = useState(false)
+    const [planningRadioClicked, setPlanningRadioClicked] = useState('no')
+
+    const [planning1stSliderValue, setPlanning1stSliderValue] = useState(0)
+    const [planning2ndSliderValue, setPlanning2ndSliderValue] = useState(0)
+
+
+
+    const getStepContent = (step) => {
+        switch(step) {
+            case 0: 
+                return <ProjectInfo />
+            case 1:
+                return <WorkSite 
+                    topChecked={topChecked}
+                    setTopChecked={setTopChecked}
+                    topRadioClicked={topRadioClicked}
+                    setTopRadioClicked={setTopRadioClicked}
+                    topSliderValue={topSliderValue}
+                    setTopSliderValue={setTopSliderValue}
+
+                    top2ndSliderValue={top2ndSliderValue}
+                    setTop2ndSliderValue={setTop2ndSliderValue}
+
+                    bottomChecked={bottomChecked}
+                    setBottomChecked={setBottomChecked}
+                    bottomRadioClicked={bottomRadioClicked}
+                    setBottomRadioClicked={setBottomRadioClicked}
+                    bottom1stSliderValue={bottom1stSliderValue}
+                    setBottom1stSliderValue={setBottom1stSliderValue}
+
+                    bottom2ndSliderValue={bottom2ndSliderValue}
+                    setBottom2ndSliderValue={setBottom2ndSliderValue}
+                />
+            case 2:
+                return <Planning
+                    planningChecked={planningChecked}
+                    setPlanningChecked={setPlanningChecked}
+
+                    planningRadioClicked={planningRadioClicked}
+                    setPlanningRadioClicked={setPlanningRadioClicked}
+
+                    planning1stSliderValue={planning1stSliderValue}
+                    setPlanning1stSliderValue={setPlanning1stSliderValue}
+                    planning2ndSliderValue={planning2ndSliderValue}
+                    setPlanning2ndSliderValue={setPlanning2ndSliderValue}
+                />
+            case 3:
+                return <Transporting />
+            case 4:
+                return <AreaSetup />
+            case 5:
+                return <SurfacePrep />
+            case 6:
+                return <Noise />
+            case 7:
+                return <Electrical />
+            case 8:
+                return <WorkEnv />
+            case 9:
+                return <Danger />
+            case 10:
+                return <Completion />
+            case 11:
+                return <Submission />
+            default:
+                return 'Unknown Step'
+        }
+    }
+
     const methods = useForm({
         defaultValues: {
             "principal contractor": '',
@@ -75,7 +130,23 @@ const LinearStepper = () => {
             "project manager": '',
             "project number": '',
             "hazardous materials sighted": '',
-            
+            'parson 1 name': '',
+            'parson 1 initial': '',
+            'parson 1 date': '',
+            'parson 2 name': '',
+            'parson 2 initial': '',
+            'parson 2 date': '',
+            'parson 3 name': '',
+            'parson 3 initial': '',
+            'parson 3 date': '',
+            'parson 4 name': '',
+            'parson 4 initial': '',
+            'parson 4 date': '',
+            'worksite inherent risk taking': '',
+            'worksite residual risk taking': '',
+            'worksite inherent risk taking dermatitis': '',
+            'worksite residual risk taking dermatitis': '',
+            'planning inherent risk taking lead/asbestos': '',
         }
     })
 
@@ -96,9 +167,9 @@ const LinearStepper = () => {
         return Object.keys(completed).length;
     };
 
-    const isLastStep = () => {
-        return activeStep === totalSteps() - 1;
-    };
+    // const isLastStep = () => {
+    //     return activeStep === totalSteps() - 1;
+    // };
 
     const allStepsCompleted = () => {
         return completedSteps() === totalSteps();

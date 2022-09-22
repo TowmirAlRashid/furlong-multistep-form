@@ -1,6 +1,7 @@
 import { Box, Container, Paper, Typography } from "@mui/material"
 import LinearStepper from "./components/LinearStepper";
 
+import './App.css'
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
                     Furlong Painting - Safe Work Method Statement (SWMS)
                 </Typography>
             </Box>
-            <Paper component={Box} p={3}>
+            <Paper component={Box} p={3} sx={{ minHeight: '700px'}}>
                 <LinearStepper />
             </Paper>
       </Container>

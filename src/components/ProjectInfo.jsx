@@ -1,4 +1,5 @@
-import { Box, FormControlLabel, FormLabel, InputLabel, Radio, RadioGroup, TextField, Typography } from '@mui/material'
+
+import { Box, FormControlLabel, FormLabel, Radio, RadioGroup, Table, TableBody, TableCell, TableHead, TableRow, TextField, Typography } from '@mui/material'
 import React from 'react'
 import { Controller, useFormContext } from 'react-hook-form'
 
@@ -209,40 +210,197 @@ const ProjectInfo = () => {
       </Box>
 
       <Box sx={{ mb: '20px' }}>
-        <table style={{ margin: '0 auto'}}>
-            <thead>
-              <tr style={{ fontSize: '12px', marginBottom: '20px' }}>
-                <th style={{ marginBottom: '20px'}}></th>
-                <th style={{ marginBottom: '20px'}}>Parson 1</th>
-                <th style={{ marginBottom: '20px'}}>Parson 2</th>
-                <th style={{ marginBottom: '20px'}}>Parson 3</th>
-                <th style={{ marginBottom: '20px'}}>Parson 4</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style={{ fontSize: '12px' }}>Name</td>
-                <td><input type='text' /></td>
-                <td><input type='text' /></td>
-                <td><input type='text' /></td>
-                <td><input type='text' /></td>
-              </tr>
-              <tr>
-                <td style={{ fontSize: '12px' }} >Initial</td>
-                <td><input type='text' /></td>
-                <td><input type='text' /></td>
-                <td><input type='text' /></td>
-                <td><input type='text' /></td>
-              </tr>
-              <tr>
-                <td style={{ fontSize: '12px' }}>Date</td>
-                <td><input type='text' /></td>
-                <td><input type='text' /></td>
-                <td><input type='text' /></td>
-                <td><input type='text' /></td>
-              </tr>
-            </tbody>
-        </table>
+        <Typography sx={{
+          fontWeight: 'bold',
+          margin: '1.5rem 0 1.5rem'
+        }}>
+          PERSONS CONSULTED IN DEVELOPMENT, REVIEW AND APPROVAL OF SWMS :
+        </Typography>
+        <Table style={{ margin: '0 auto'}}>
+            <TableHead>
+              <TableRow style={{ fontSize: '12px', marginBottom: '20px' }} sx={{ borderBottom: 'none'}}>
+                <TableCell></TableCell>
+                <TableCell align='center'>Parson 1</TableCell>
+                <TableCell align='center'>Parson 2</TableCell>
+                <TableCell align='center'>Parson 3</TableCell>
+                <TableCell align='center'>Parson 4</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell style={{ fontSize: '12px' }}>Name</TableCell>
+                <TableCell>
+                  <Controller
+                    control={control}
+                    name='parson 1 name'
+                    render={({ field }) => (
+                      <TextField variant="outlined" type='text' {...field} inputProps={{
+                        style: {
+                          padding: '5px 14px',
+                        }
+                      }} />
+                    )}
+                  />
+                </TableCell>
+                <TableCell>
+                  <Controller
+                    control={control}
+                    name='parson 2 name'
+                    render={({ field }) => (
+                      <TextField variant="outlined" type='text' {...field} inputProps={{
+                        style: {
+                          padding: '5px 14px',
+                        }
+                      }} />
+                    )}
+                  />
+                </TableCell>
+                <TableCell>
+                  <Controller
+                    control={control}
+                    name='parson 3 name'
+                    render={({ field }) => (
+                      <TextField variant="outlined" type='text' {...field} inputProps={{
+                        style: {
+                          padding: '5px 14px',
+                        }
+                      }} />
+                    )}
+                  />
+                </TableCell>
+                <TableCell>
+                  <Controller
+                    control={control}
+                    name='parson 4 name'
+                    render={({ field }) => (
+                      <TextField variant="outlined" type='text' {...field} inputProps={{
+                        style: {
+                          padding: '5px 14px',
+                        }
+                      }} />
+                    )}
+                  />
+                </TableCell>
+              </TableRow>
+
+              <TableRow>
+                <TableCell style={{ fontSize: '12px' }} >Initial</TableCell>
+                <TableCell>
+                  <Controller
+                    control={control}
+                    name='parson 1 initial'
+                    render={({ field}) => (
+                      <TextField variant="outlined" type='text' {...field} inputProps={{
+                        style: {
+                          padding: '5px 14px',
+                        }
+                      }} />
+                    )}
+                  />
+                </TableCell>
+                <TableCell>
+                  <Controller
+                    control={control}
+                    name='parson 2 initial'
+                    render={({ field}) => (
+                      <TextField variant="outlined" type='text' {...field} inputProps={{
+                        style: {
+                          padding: '5px 14px',
+                        }
+                      }} />
+                    )}
+                  />
+                </TableCell>
+                <TableCell>
+                  <Controller
+                    control={control}
+                    name='parson 3 initial'
+                    render={({ field}) => (
+                      <TextField variant="outlined" type='text' {...field} inputProps={{
+                        style: {
+                          padding: '5px 14px',
+                        }
+                      }} />
+                    )}
+                  />
+                </TableCell>
+                <TableCell>
+                  <Controller
+                    control={control}
+                    name='parson 4 initial'
+                    render={({ field}) => (
+                      <TextField variant="outlined" type='text' {...field} inputProps={{
+                        style: {
+                          padding: '5px 14px',
+                        }
+                      }} />
+                    )}
+                  />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell style={{ fontSize: '12px' }}>Date</TableCell>
+                <TableCell>
+                  <Controller
+                    control={control}
+                    name='parson 1 date'
+                    render={({ field}) => (
+                      <TextField variant="outlined" type='text' {...field} inputProps={{
+                        style: {
+                          padding: '5px 14px',
+                        }
+                      }} />
+                    )}
+                  />
+                </TableCell>
+                <TableCell>
+                  <Controller
+                    control={control}
+                    name='parson 2 date'
+                    render={({ field}) => (
+                      <TextField variant="outlined" type='text' {...field} inputProps={{
+                        style: {
+                          padding: '5px 14px',
+                        }
+                      }} />
+                    )}
+                  />
+                </TableCell>
+                <TableCell>
+                  <Controller
+                    control={control}
+                    name='parson 3 date'
+                    render={({ field}) => (
+                      <TextField variant="outlined" type='text' {...field} inputProps={{
+                        style: {
+                          padding: '5px 14px',
+                        }
+                      }}
+                      // sx={{
+                      //   " & .MuiInputBase-input":  {
+                      //     backgroundColor: 'yellow'
+                      // }
+                      // }}
+                      />
+                    )}
+                  />
+                </TableCell>
+                <TableCell>
+                  <Controller
+                    control={control}
+                    name='parson 4 date'
+                    render={({ field}) => (
+                      <TextField variant="outlined" type='text' {...field} inputProps={{
+                        style: {
+                          padding: '5px 14px',
+                        }
+                      }} />
+                    )}
+                  />
+                </TableCell>
+              </TableRow>
+            </TableBody>
+        </Table>
       </Box>
 
       <Box sx={{ mb: '20px'}}>

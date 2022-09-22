@@ -1,0 +1,30 @@
+.MuiTableCell-root {
+    border-bottom: none;
+}
+
+.MuiSlider-thumb {
+    background-color: white !important;
+}
+
+.MuiSlider-valueLabel {
+    background-color: #2f9eec !important;
+    width: 4rem !important;
+}
+
+.MuiListItemIcon-root {
+    width: 1rem !important;
+}
+
+.css-10hburv-MuiTypography-root {
+    font-size: 13px;
+}
+
+ul {
+    list-style: disc !important;
+}
+
+ul li {
+    margin-left: 2rem;
+    font-size: 13px;
+    line-height: 1.5rem !important;
+}
