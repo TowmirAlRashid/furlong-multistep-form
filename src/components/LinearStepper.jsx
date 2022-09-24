@@ -88,6 +88,15 @@ const LinearStepper = () => {
     const [workenvMiddleRadioClicked, setWorkenvMiddleRadioClicked] = useState('no')
     const [workenvBottomRadioClicked, setWorkenvBottomRadioClicked] = useState('no')
 
+    //electrical component states - 7
+    const [electricTopChecked, setElectricTopChecked] = useState(false)
+    const [electricMiddleChecked, setElectricMiddleChecked] = useState(false)
+    const [electricBottomChecked, setElectricBottomChecked] = useState(false)
+
+    const [electricTopRadioClicked, setElectricTopRadioClicked] = useState('no')
+    const [electricMiddleRadioClicked, setElectricMiddleRadioClicked] = useState('no')
+    const [electricBottomRadioClicked, setElectricBottomRadioClicked] = useState('no')
+
 
 
     const getStepContent = (step) => {
@@ -147,7 +156,21 @@ const LinearStepper = () => {
                     setNoiseRadioClicked={setNoiseRadioClicked}
                 />
             case 7:
-                return <Electrical />
+                return <Electrical 
+                    electricTopChecked={electricTopChecked}
+                    setElectricTopChecked={setElectricTopChecked}
+                    electricMiddleChecked={electricMiddleChecked}
+                    setElectricMiddleChecked={setElectricMiddleChecked}
+                    electricBottomChecked={electricBottomChecked}
+                    setElectricBottomChecked={setElectricBottomChecked}
+
+                    electricTopRadioClicked={electricTopRadioClicked}
+                    setElectricTopRadioClicked={setElectricTopRadioClicked}
+                    electricMiddleRadioClicked={electricMiddleRadioClicked}
+                    setElectricMiddleRadioClicked={setElectricMiddleRadioClicked}
+                    electricBottomRadioClicked={electricBottomRadioClicked}
+                    setElectricBottomRadioClicked={setElectricBottomRadioClicked}
+                />
             case 8:
                 return <WorkEnv 
                     workenvTopChecked={workenvTopChecked}
@@ -256,6 +279,12 @@ const LinearStepper = () => {
             'work environment residual risk UV rays': '',
             'work environment inherent risk atmosphere contamination': '',
             'work environment residual risk atmosphere contamination': '',
+            'electrical inherent risk power sources': '',
+            'electrical residual risk power sources': '',
+            'electrical inherent risk steel extension': '',
+            'electrical residual risk steel extension': "",
+            'electrical inherent risk power overhead': '',
+            'electrical residual risk power overhead': '',
         }
     })
 
