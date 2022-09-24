@@ -99,6 +99,23 @@ const LinearStepper = () => {
     const [danger2nd1stSliderValue, setDanger2nd1stSliderValue] = useState(0)
     const [danger2nd2ndSliderValue, setDanger2nd2ndSliderValue] = useState(0)
 
+    //completion component states - 10
+    const [completionChecked, setCompletionChecked] = useState(false)
+
+    const [completion1stRadioClicked, setCompletion1stRadioClicked] = useState('no')
+    const [completion2ndRadioClicked, setCompletion2ndRadioClicked] = useState('no')
+    const [completion3rdRadioClicked, setCompletion3rdRadioClicked] = useState('no')
+    const [completion4thRadioClicked, setCompletion4thRadioClicked] = useState('no')
+
+    const [completion1st1stSliderValue, setCompletion1st1stSliderValue] = useState(0)
+    const [completion1st2ndSliderValue, setCompletion1st2ndSliderValue] = useState(0)
+    const [completion2nd1stSliderValue, setCompletion2nd1stSliderValue] = useState(0)
+    const [completion2nd2ndSliderValue, setCompletion2nd2ndSliderValue] = useState(0)
+    const [completion3rd1stSliderValue, setCompletion3rd1stSliderValue] = useState(0)
+    const [completion3rd2ndSliderValue, setCompletion3rd2ndSliderValue] = useState(0)
+    const [completion4th1stSliderValue, setCompletion4th1stSliderValue] = useState(0)
+    const [completion4th2ndSliderValue, setCompletion4th2ndSliderValue] = useState(0)
+
 
 
     const getStepContent = (step) => {
@@ -222,7 +239,36 @@ const LinearStepper = () => {
                     setDanger2nd2ndSliderValue={setDanger2nd2ndSliderValue}
                 />
             case 10:
-                return <Completion />
+                return <Completion 
+                    completionChecked={completionChecked}
+                    setCompletionChecked={setCompletionChecked}
+
+                    completion1stRadioClicked={completion1stRadioClicked}
+                    setCompletion1stRadioClicked={setCompletion1stRadioClicked}
+                    completion2ndRadioClicked={completion2ndRadioClicked}
+                    setCompletion2ndRadioClicked={setCompletion2ndRadioClicked}
+                    completion3rdRadioClicked={completion3rdRadioClicked}
+                    setCompletion3rdRadioClicked={setCompletion3rdRadioClicked}
+                    completion4thRadioClicked={completion4thRadioClicked}
+                    setCompletion4thRadioClicked={setCompletion4thRadioClicked}
+
+                    completion1st1stSliderValue={completion1st1stSliderValue}
+                    setCompletion1st1stSliderValue={setCompletion1st1stSliderValue}
+                    completion1st2ndSliderValue={completion1st2ndSliderValue}
+                    setCompletion1st2ndSliderValue={setCompletion1st2ndSliderValue}
+                    completion2nd1stSliderValue={completion2nd1stSliderValue}
+                    setCompletion2nd1stSliderValue={setCompletion2nd1stSliderValue}
+                    completion2nd2ndSliderValue={completion2nd2ndSliderValue}
+                    setCompletion2nd2ndSliderValue={setCompletion2nd2ndSliderValue}
+                    completion3rd1stSliderValue={completion3rd1stSliderValue}
+                    setCompletion3rd1stSliderValue={setCompletion3rd1stSliderValue}
+                    completion3rd2ndSliderValue={completion3rd2ndSliderValue}
+                    setCompletion3rd2ndSliderValue={setCompletion3rd2ndSliderValue}
+                    completion4th1stSliderValue={completion4th1stSliderValue}
+                    setCompletion4th1stSliderValue={setCompletion4th1stSliderValue}
+                    completion4th2ndSliderValue={completion4th2ndSliderValue}
+                    setCompletion4th2ndSliderValue={setCompletion4th2ndSliderValue}
+                />
             case 11:
                 return <Submission />
             default:
@@ -272,6 +318,19 @@ const LinearStepper = () => {
             'danger chemical exposure residual risk taking': '',
             'danger contaminated waste inherent risk taking': '',
             'danger contaminated waste residual risk taking': '',
+            'completion inherent risk rating cleanUp': '',
+            'completion residual risk rating cleanUp': '',
+            'completion inherent risk rating disposal': '',
+            'completion residual risk rating disposal': '',
+            'completion inherent risk rating return energy': '',
+            'completion residual risk rating return energy': '',
+            'completion inherent risk rating remove barriers': '',
+            'completion residual risk rating remove barriers': '',
+            'hazards and risks': '',
+            'risk at this site?': '',
+            'inherent risk rating (1-4)': '',
+            'how to control risks': '',
+            'residual risk taking (1-4)': '',
         }
     })
 

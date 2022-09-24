@@ -1,5 +1,5 @@
 .MuiTableCell-root {
-    border-bottom: none;
+    border-bottom: none !important;
 }
 
 .MuiSlider-thumb {
