@@ -37,7 +37,7 @@ const getSteps = () => {
 
 
 const LinearStepper = () => {
-    //worksite component states
+    //worksite component states - 1
     const [topChecked, setTopChecked] = useState(false)
     const [topRadioClicked, setTopRadioClicked] = useState('no')
     const [topSliderValue, setTopSliderValue] = useState(0)
@@ -50,14 +50,14 @@ const LinearStepper = () => {
 
     const [bottom2ndSliderValue, setBottom2ndSliderValue] = useState(0)
 
-    //planning component states
+    //planning component states - 2
     const [planningChecked, setPlanningChecked] = useState(false)
     const [planningRadioClicked, setPlanningRadioClicked] = useState('no')
 
     const [planning1stSliderValue, setPlanning1stSliderValue] = useState(0)
     const [planning2ndSliderValue, setPlanning2ndSliderValue] = useState(0)
 
-    //transporting component states
+    //transporting component states - 3
     const [transportingTopChecked, setTransportingTopChecked] = useState(false)
     const [transportingMiddleChecked, setTransportingMiddleChecked] = useState(false)
     const [transportingBottomChecked, setTransportingBottomChecked] = useState(false)
@@ -78,6 +78,15 @@ const LinearStepper = () => {
     const [transportBottom1st2ndSliderValue, setTransportBottom1st2ndSliderValue] = useState(0)
     const [transportBottom2nd1stSliderValue, setTransportBottom2nd1stSliderValue] = useState(0)
     const [transportBottom2nd2ndSliderValue, setTransportBottom2nd2ndSliderValue] = useState(0)
+    
+
+    // noise component states - 6
+    const [noiseChecked, setNoiseChecked] = useState(false)
+
+    const [noiseRadioClicked, setNoiseRadioClicked] = useState('no')
+
+    const [noise1stSliderValue, setNoise1stSliderValue] = useState(0)
+    const [noise2ndSliderValue, setNoise2ndSliderValue] = useState(0)
 
 
 
@@ -166,7 +175,18 @@ const LinearStepper = () => {
             case 5:
                 return <SurfacePrep />
             case 6:
-                return <Noise />
+                return <Noise 
+                    noiseChecked={noiseChecked}
+                    setNoiseChecked={setNoiseChecked}
+
+                    noiseRadioClicked={noiseRadioClicked}
+                    setNoiseRadioClicked={setNoiseRadioClicked}
+
+                    noise1stSliderValue={noise1stSliderValue}
+                    setNoise1stSliderValue={setNoise1stSliderValue}
+                    noise2ndSliderValue={noise2ndSliderValue}
+                    setNoise2ndSliderValue={setNoise2ndSliderValue}
+                />
             case 7:
                 return <Electrical />
             case 8:
@@ -216,6 +236,10 @@ const LinearStepper = () => {
             'transporting residual risk taking flying objects': '',
             'transporting inherent risk taking securing ladders': '',
             'transporting residual risk taking securing ladders': '',
+            'transporting inherent risk taking securing points': '',
+            'transporting residual risk taking securing points': '',
+            'noise inherent risk taking': '',
+            'noise residual risk taking': "",
         }
     })
 
