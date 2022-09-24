@@ -152,10 +152,14 @@ const LinearStepper = () => {
                     setTransportMiddle1stSliderValue={setTransportMiddle1stSliderValue}
                     transportMiddle2ndSliderValue={transportMiddle2ndSliderValue}
                     setTransportMiddle2ndSliderValue={setTransportMiddle2ndSliderValue}
-                    // transportBottom1stSliderValue={transportBottom1stSliderValue}
-                    // setTransportBottom1stSliderValue={setTransportBottom1stSliderValue}
-                    // transportBottom2ndSliderValue={transportBottom2ndSliderValue}
-                    // setTransportBottom2ndSliderValue={setTransportBottom2ndSliderValue}
+                    transportBottom1st1stSliderValue={transportBottom1st1stSliderValue}
+                    setTransportBottom1st1stSliderValue={setTransportBottom1st1stSliderValue}
+                    transportBottom1st2ndSliderValue={transportBottom1st2ndSliderValue}
+                    setTransportBottom1st2ndSliderValue={setTransportBottom1st2ndSliderValue}
+                    transportBottom2nd1stSliderValue={transportBottom2nd1stSliderValue}
+                    setTransportBottom2nd1stSliderValue={setTransportBottom2nd1stSliderValue}
+                    transportBottom2nd2ndSliderValue={transportBottom2nd2ndSliderValue}
+                    setTransportBottom2nd2ndSliderValue={setTransportBottom2nd2ndSliderValue}
                 />
             case 4:
                 return <AreaSetup />
@@ -210,6 +214,8 @@ const LinearStepper = () => {
             'transporting inherent risk taking': "",
             'transporting inherent risk taking flying objects': '',
             'transporting residual risk taking flying objects': '',
+            'transporting inherent risk taking securing ladders': '',
+            'transporting residual risk taking securing ladders': '',
         }
     })
 

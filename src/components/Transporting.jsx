@@ -30,7 +30,15 @@ const Transporting = ({
   transportMiddle1stSliderValue,
   setTransportMiddle1stSliderValue,
   transportMiddle2ndSliderValue,
-  setTransportMiddle2ndSliderValue
+  setTransportMiddle2ndSliderValue,
+  transportBottom1st1stSliderValue,
+  setTransportBottom1st1stSliderValue,
+  transportBottom1st2ndSliderValue,
+  setTransportBottom1st2ndSliderValue,
+  transportBottom2nd1stSliderValue,
+  setTransportBottom2nd1stSliderValue,
+  transportBottom2nd2ndSliderValue,
+  setTransportBottom2nd2ndSliderValue
 }) => {
 
   const transportTop1st1stSliderHandleChange = (event, newValue) => {
@@ -66,6 +74,30 @@ const Transporting = ({
   const transportMiddle2ndSliderHandleChange = (event, newValue) => {
     if (typeof newValue === 'number') {
       setTransportMiddle2ndSliderValue(newValue);
+    }
+  };
+
+  const transportBottom1st1stSliderHandleChange = (event, newValue) => {
+    if (typeof newValue === 'number') {
+      setTransportBottom1st1stSliderValue(newValue);
+    }
+  };
+
+  const transportBottom1st2ndSliderHandleChange = (event, newValue) => {
+    if (typeof newValue === 'number') {
+      setTransportBottom1st2ndSliderValue(newValue);
+    }
+  };
+
+  const transportBottom2nd1stSliderHandleChange = (event, newValue) => {
+    if (typeof newValue === 'number') {
+      setTransportBottom2nd1stSliderValue(newValue);
+    }
+  };
+
+  const transportBottom2nd2ndSliderHandleChange = (event, newValue) => {
+    if (typeof newValue === 'number') {
+      setTransportBottom2nd2ndSliderValue(newValue);
     }
   };
 
@@ -194,7 +226,47 @@ const Transporting = ({
                   <hr color='lightGray' />
 
                   <Box sx={{ m: '2rem 0 1rem'}}>
-                    
+                    <Typography fontWeight='bold' sx={{ mb: '1.5rem'}}>What are the hazards and risks?</Typography>
+
+                    <RadioAndSliderComp
+                      titleNormal='Horizontal overhang of ladders, planks etc: '
+                      titleRed='Is it a risk at this site?'
+                      radioGetter={transportingBottom1stRadioClicked}
+                      radioSetter={setTransportingBottom1stRadioClicked}
+                      trueCheck={transportingBottomChecked}
+                      radioBotQ='How will the hazards and risks be controlled?'
+                      radioBotText='Minimize horizontal overhang of ladders and planks. Tie a red flag (at least 300mm x 300mm) on the end of any ladder / plank that extends beyond the rear of the vehicle'
+                      slider1Title='Inherent Risk Rating'
+                      name1='transporting inherent risk taking securing ladders'
+                      firstSliderValue={transportBottom1st1stSliderValue}
+                      firstSliderHandleChange={transportBottom1st1stSliderHandleChange}
+                      betweenQ=''
+                      betweenText=''
+                      slider2Title='Residual Risk Rating'
+                      name2='transporting residual risk taking securing ladders'
+                      secondSliderValue={transportBottom1st2ndSliderValue}
+                      secondSliderHandleChange={transportBottom1st2ndSliderHandleChange}
+                    />
+
+                    <RadioAndSliderComp
+                      titleNormal='Unsecured ladders and planks -'
+                      titleRed='Is it a risk at this site?'
+                      radioGetter={transportingBottom2ndRadioClicked}
+                      radioSetter={setTransportingBottom2ndRadioClicked}
+                      trueCheck={transportingBottomChecked}
+                      radioBotQ='How will the hazards and risks be controlled?'
+                      radioBotText='Install securing points for ladders, planks to minimal movement and vibration'
+                      slider1Title='Inherent Risk Rating'
+                      name1='transporting inherent risk taking securing points'
+                      firstSliderValue={transportBottom2nd1stSliderValue}
+                      firstSliderHandleChange={transportBottom2nd1stSliderHandleChange}
+                      betweenQ=''
+                      betweenText=''
+                      slider2Title='Residual Risk Rating'
+                      name2='transporting residual risk taking securing points'
+                      secondSliderValue={transportBottom2nd2ndSliderValue}
+                      secondSliderHandleChange={transportBottom2nd2ndSliderHandleChange}
+                    />
                   </Box>
                 </Box>
               )
