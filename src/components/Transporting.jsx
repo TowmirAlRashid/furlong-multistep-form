@@ -186,6 +186,19 @@ const Transporting = ({
               label="Securing Ladders/planks"
               onClick={(e) => setTransportingBottomChecked(!transportingBottomChecked)}
             />
+
+            {
+              transportingBottomChecked && (
+                <Box sx={{ m: '20px 0 0'}}>
+                  <Typography sx={{ fontSize: '1.5rem', mb: '1rem' }}>Securing Ladders/planks</Typography>
+                  <hr color='lightGray' />
+
+                  <Box sx={{ m: '2rem 0 1rem'}}>
+                    
+                  </Box>
+                </Box>
+              )
+            }
           </FormGroup>
         </Box>
       </Box>
