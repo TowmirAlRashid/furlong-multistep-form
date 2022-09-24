@@ -88,6 +88,17 @@ const LinearStepper = () => {
     const [noise1stSliderValue, setNoise1stSliderValue] = useState(0)
     const [noise2ndSliderValue, setNoise2ndSliderValue] = useState(0)
 
+    //danger component states - 9
+    const [dangerChecked, setDangerChecked] = useState(false)
+
+    const [danger1stRadioClicked, setDanger1stRadioClicked] = useState('no')
+    const [danger2ndRadioClicked, setDanger2ndRadioClicked] = useState('no')
+
+    const [danger1st1stSliderValue, setDanger1st1stSliderValue] = useState(0)
+    const [danger1st2ndSliderValue, setDanger1st2ndSliderValue] = useState(0)
+    const [danger2nd1stSliderValue, setDanger2nd1stSliderValue] = useState(0)
+    const [danger2nd2ndSliderValue, setDanger2nd2ndSliderValue] = useState(0)
+
 
 
     const getStepContent = (step) => {
@@ -192,7 +203,24 @@ const LinearStepper = () => {
             case 8:
                 return <WorkEnv />
             case 9:
-                return <Danger />
+                return <Danger 
+                    dangerChecked={dangerChecked}
+                    setDangerChecked={setDangerChecked}
+
+                    danger1stRadioClicked={danger1stRadioClicked}
+                    setDanger1stRadioClicked={setDanger1stRadioClicked}
+                    danger2ndRadioClicked={danger2ndRadioClicked}
+                    setDanger2ndRadioClicked={setDanger2ndRadioClicked}
+
+                    danger1st1stSliderValue={danger1st1stSliderValue}
+                    setDanger1st1stSliderValue={setDanger1st1stSliderValue}
+                    danger1st2ndSliderValue={danger1st2ndSliderValue}
+                    setDanger1st2ndSliderValue={setDanger1st2ndSliderValue}
+                    danger2nd1stSliderValue={danger2nd1stSliderValue}
+                    setDanger2nd1stSliderValue={setDanger2nd1stSliderValue}
+                    danger2nd2ndSliderValue={danger2nd2ndSliderValue}
+                    setDanger2nd2ndSliderValue={setDanger2nd2ndSliderValue}
+                />
             case 10:
                 return <Completion />
             case 11:
@@ -240,6 +268,10 @@ const LinearStepper = () => {
             'transporting residual risk taking securing points': '',
             'noise inherent risk taking': '',
             'noise residual risk taking': "",
+            'danger chemical exposure inherent risk taking': '',
+            'danger chemical exposure residual risk taking': '',
+            'danger contaminated waste inherent risk taking': '',
+            'danger contaminated waste residual risk taking': '',
         }
     })
 
