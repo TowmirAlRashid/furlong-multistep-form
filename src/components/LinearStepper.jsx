@@ -40,22 +40,13 @@ const LinearStepper = () => {
     //worksite component states - 1
     const [topChecked, setTopChecked] = useState(false)
     const [topRadioClicked, setTopRadioClicked] = useState('no')
-    const [topSliderValue, setTopSliderValue] = useState(0)
-
-    const [top2ndSliderValue, setTop2ndSliderValue] = useState(0)
 
     const [bottomChecked, setBottomChecked] = useState(false)
     const [bottomRadioClicked, setBottomRadioClicked] = useState('no')
-    const [bottom1stSliderValue, setBottom1stSliderValue] = useState(0)
-
-    const [bottom2ndSliderValue, setBottom2ndSliderValue] = useState(0)
 
     //planning component states - 2
     const [planningChecked, setPlanningChecked] = useState(false)
     const [planningRadioClicked, setPlanningRadioClicked] = useState('no')
-
-    const [planning1stSliderValue, setPlanning1stSliderValue] = useState(0)
-    const [planning2ndSliderValue, setPlanning2ndSliderValue] = useState(0)
 
     //transporting component states - 3
     const [transportingTopChecked, setTransportingTopChecked] = useState(false)
@@ -67,17 +58,6 @@ const LinearStepper = () => {
     const [transportingMiddleRadioClicked, setTransportingMiddleRadioClicked] = useState('no')
     const [transportingBottom1stRadioClicked, setTransportingBottom1stRadioClicked] = useState('no')
     const [transportingBottom2ndRadioClicked, setTransportingBottom2ndRadioClicked] = useState('no')
-
-    const [transportTop1st1stSliderValue, setTransportTop1st1stSliderValue] = useState(0)
-    const [transportTop1st2ndSliderValue, setTransportTop1st2ndSliderValue] = useState(0)
-    const [transportTop2nd1stSliderValue, setTransportTop2nd1stSliderValue] = useState(0)
-    const [transportTop2nd2ndSliderValue, setTransportTop2nd2ndSliderValue] = useState(0)
-    const [transportMiddle1stSliderValue, setTransportMiddle1stSliderValue] = useState(0)
-    const [transportMiddle2ndSliderValue, setTransportMiddle2ndSliderValue] = useState(0)
-    const [transportBottom1st1stSliderValue, setTransportBottom1st1stSliderValue] = useState(0)
-    const [transportBottom1st2ndSliderValue, setTransportBottom1st2ndSliderValue] = useState(0)
-    const [transportBottom2nd1stSliderValue, setTransportBottom2nd1stSliderValue] = useState(0)
-    const [transportBottom2nd2ndSliderValue, setTransportBottom2nd2ndSliderValue] = useState(0)
     
 
     // noise component states - 6
@@ -85,19 +65,11 @@ const LinearStepper = () => {
 
     const [noiseRadioClicked, setNoiseRadioClicked] = useState('no')
 
-    const [noise1stSliderValue, setNoise1stSliderValue] = useState(0)
-    const [noise2ndSliderValue, setNoise2ndSliderValue] = useState(0)
-
     //danger component states - 9
     const [dangerChecked, setDangerChecked] = useState(false)
 
     const [danger1stRadioClicked, setDanger1stRadioClicked] = useState('no')
     const [danger2ndRadioClicked, setDanger2ndRadioClicked] = useState('no')
-
-    const [danger1st1stSliderValue, setDanger1st1stSliderValue] = useState(0)
-    const [danger1st2ndSliderValue, setDanger1st2ndSliderValue] = useState(0)
-    const [danger2nd1stSliderValue, setDanger2nd1stSliderValue] = useState(0)
-    const [danger2nd2ndSliderValue, setDanger2nd2ndSliderValue] = useState(0)
 
     //completion component states - 10
     const [completionChecked, setCompletionChecked] = useState(false)
@@ -107,14 +79,14 @@ const LinearStepper = () => {
     const [completion3rdRadioClicked, setCompletion3rdRadioClicked] = useState('no')
     const [completion4thRadioClicked, setCompletion4thRadioClicked] = useState('no')
 
-    const [completion1st1stSliderValue, setCompletion1st1stSliderValue] = useState(0)
-    const [completion1st2ndSliderValue, setCompletion1st2ndSliderValue] = useState(0)
-    const [completion2nd1stSliderValue, setCompletion2nd1stSliderValue] = useState(0)
-    const [completion2nd2ndSliderValue, setCompletion2nd2ndSliderValue] = useState(0)
-    const [completion3rd1stSliderValue, setCompletion3rd1stSliderValue] = useState(0)
-    const [completion3rd2ndSliderValue, setCompletion3rd2ndSliderValue] = useState(0)
-    const [completion4th1stSliderValue, setCompletion4th1stSliderValue] = useState(0)
-    const [completion4th2ndSliderValue, setCompletion4th2ndSliderValue] = useState(0)
+    //workEnv component states - 8
+    const [workenvTopChecked, setWorkenvTopChecked] = useState(false)
+    const [workenvMiddleChecked, setWorkenvMiddleChecked] = useState(false)
+    const [workenvBottomChecked, setWorkenvBottomChecked] = useState(false)
+
+    const [workenvTopRadioClicked, setWorkenvTopRadioClicked] = useState('no')
+    const [workenvMiddleRadioClicked, setWorkenvMiddleRadioClicked] = useState('no')
+    const [workenvBottomRadioClicked, setWorkenvBottomRadioClicked] = useState('no')
 
 
 
@@ -128,21 +100,11 @@ const LinearStepper = () => {
                     setTopChecked={setTopChecked}
                     topRadioClicked={topRadioClicked}
                     setTopRadioClicked={setTopRadioClicked}
-                    topSliderValue={topSliderValue}
-                    setTopSliderValue={setTopSliderValue}
-
-                    top2ndSliderValue={top2ndSliderValue}
-                    setTop2ndSliderValue={setTop2ndSliderValue}
 
                     bottomChecked={bottomChecked}
                     setBottomChecked={setBottomChecked}
                     bottomRadioClicked={bottomRadioClicked}
                     setBottomRadioClicked={setBottomRadioClicked}
-                    bottom1stSliderValue={bottom1stSliderValue}
-                    setBottom1stSliderValue={setBottom1stSliderValue}
-
-                    bottom2ndSliderValue={bottom2ndSliderValue}
-                    setBottom2ndSliderValue={setBottom2ndSliderValue}
                 />
             case 2:
                 return <Planning
@@ -151,11 +113,6 @@ const LinearStepper = () => {
 
                     planningRadioClicked={planningRadioClicked}
                     setPlanningRadioClicked={setPlanningRadioClicked}
-
-                    planning1stSliderValue={planning1stSliderValue}
-                    setPlanning1stSliderValue={setPlanning1stSliderValue}
-                    planning2ndSliderValue={planning2ndSliderValue}
-                    setPlanning2ndSliderValue={setPlanning2ndSliderValue}
                 />
             case 3:
                 return <Transporting
@@ -176,27 +133,6 @@ const LinearStepper = () => {
                     setTransportingBottom1stRadioClicked={setTransportingBottom1stRadioClicked}
                     transportingBottom2ndRadioClicked={transportingBottom2ndRadioClicked}
                     setTransportingBottom2ndRadioClicked={setTransportingBottom2ndRadioClicked}
-
-                    transportTop1st1stSliderValue={transportTop1st1stSliderValue}
-                    setTransportTop1st1stSliderValue={setTransportTop1st1stSliderValue}
-                    transportTop1st2ndSliderValue={transportTop1st2ndSliderValue}
-                    setTransportTop1st2ndSliderValue={setTransportTop1st2ndSliderValue}
-                    transportTop2nd1stSliderValue={transportTop2nd1stSliderValue}
-                    setTransportTop2nd1stSliderValue={setTransportTop2nd1stSliderValue}
-                    transportTop2nd2ndSliderValue={transportTop2nd2ndSliderValue}
-                    setTransportTop2nd2ndSliderValue={setTransportTop2nd2ndSliderValue}
-                    transportMiddle1stSliderValue={transportMiddle1stSliderValue}
-                    setTransportMiddle1stSliderValue={setTransportMiddle1stSliderValue}
-                    transportMiddle2ndSliderValue={transportMiddle2ndSliderValue}
-                    setTransportMiddle2ndSliderValue={setTransportMiddle2ndSliderValue}
-                    transportBottom1st1stSliderValue={transportBottom1st1stSliderValue}
-                    setTransportBottom1st1stSliderValue={setTransportBottom1st1stSliderValue}
-                    transportBottom1st2ndSliderValue={transportBottom1st2ndSliderValue}
-                    setTransportBottom1st2ndSliderValue={setTransportBottom1st2ndSliderValue}
-                    transportBottom2nd1stSliderValue={transportBottom2nd1stSliderValue}
-                    setTransportBottom2nd1stSliderValue={setTransportBottom2nd1stSliderValue}
-                    transportBottom2nd2ndSliderValue={transportBottom2nd2ndSliderValue}
-                    setTransportBottom2nd2ndSliderValue={setTransportBottom2nd2ndSliderValue}
                 />
             case 4:
                 return <AreaSetup />
@@ -209,16 +145,25 @@ const LinearStepper = () => {
 
                     noiseRadioClicked={noiseRadioClicked}
                     setNoiseRadioClicked={setNoiseRadioClicked}
-
-                    noise1stSliderValue={noise1stSliderValue}
-                    setNoise1stSliderValue={setNoise1stSliderValue}
-                    noise2ndSliderValue={noise2ndSliderValue}
-                    setNoise2ndSliderValue={setNoise2ndSliderValue}
                 />
             case 7:
                 return <Electrical />
             case 8:
-                return <WorkEnv />
+                return <WorkEnv 
+                    workenvTopChecked={workenvTopChecked}
+                    setWorkenvTopChecked={setWorkenvTopChecked}
+                    workenvMiddleChecked={workenvMiddleChecked}
+                    setWorkenvMiddleChecked={setWorkenvMiddleChecked}
+                    workenvBottomChecked={workenvBottomChecked}
+                    setWorkenvBottomChecked={setWorkenvBottomChecked}
+
+                    workenvTopRadioClicked={workenvTopRadioClicked}
+                    setWorkenvTopRadioClicked={setWorkenvTopRadioClicked}
+                    workenvMiddleRadioClicked={workenvMiddleRadioClicked}
+                    setWorkenvMiddleRadioClicked={setWorkenvMiddleRadioClicked}
+                    workenvBottomRadioClicked={workenvBottomRadioClicked}
+                    setWorkenvBottomRadioClicked={setWorkenvBottomRadioClicked}
+                />
             case 9:
                 return <Danger 
                     dangerChecked={dangerChecked}
@@ -228,15 +173,6 @@ const LinearStepper = () => {
                     setDanger1stRadioClicked={setDanger1stRadioClicked}
                     danger2ndRadioClicked={danger2ndRadioClicked}
                     setDanger2ndRadioClicked={setDanger2ndRadioClicked}
-
-                    danger1st1stSliderValue={danger1st1stSliderValue}
-                    setDanger1st1stSliderValue={setDanger1st1stSliderValue}
-                    danger1st2ndSliderValue={danger1st2ndSliderValue}
-                    setDanger1st2ndSliderValue={setDanger1st2ndSliderValue}
-                    danger2nd1stSliderValue={danger2nd1stSliderValue}
-                    setDanger2nd1stSliderValue={setDanger2nd1stSliderValue}
-                    danger2nd2ndSliderValue={danger2nd2ndSliderValue}
-                    setDanger2nd2ndSliderValue={setDanger2nd2ndSliderValue}
                 />
             case 10:
                 return <Completion 
@@ -251,23 +187,6 @@ const LinearStepper = () => {
                     setCompletion3rdRadioClicked={setCompletion3rdRadioClicked}
                     completion4thRadioClicked={completion4thRadioClicked}
                     setCompletion4thRadioClicked={setCompletion4thRadioClicked}
-
-                    completion1st1stSliderValue={completion1st1stSliderValue}
-                    setCompletion1st1stSliderValue={setCompletion1st1stSliderValue}
-                    completion1st2ndSliderValue={completion1st2ndSliderValue}
-                    setCompletion1st2ndSliderValue={setCompletion1st2ndSliderValue}
-                    completion2nd1stSliderValue={completion2nd1stSliderValue}
-                    setCompletion2nd1stSliderValue={setCompletion2nd1stSliderValue}
-                    completion2nd2ndSliderValue={completion2nd2ndSliderValue}
-                    setCompletion2nd2ndSliderValue={setCompletion2nd2ndSliderValue}
-                    completion3rd1stSliderValue={completion3rd1stSliderValue}
-                    setCompletion3rd1stSliderValue={setCompletion3rd1stSliderValue}
-                    completion3rd2ndSliderValue={completion3rd2ndSliderValue}
-                    setCompletion3rd2ndSliderValue={setCompletion3rd2ndSliderValue}
-                    completion4th1stSliderValue={completion4th1stSliderValue}
-                    setCompletion4th1stSliderValue={setCompletion4th1stSliderValue}
-                    completion4th2ndSliderValue={completion4th2ndSliderValue}
-                    setCompletion4th2ndSliderValue={setCompletion4th2ndSliderValue}
                 />
             case 11:
                 return <Submission />
@@ -331,6 +250,12 @@ const LinearStepper = () => {
             'inherent risk rating (1-4)': '',
             'how to control risks': '',
             'residual risk taking (1-4)': '',
+            'work environment inherent risk transmission of virus': '',
+            'work environment residual risk transmission of virus': '',
+            'work environment inherent risk UV rays': '',
+            'work environment residual risk UV rays': '',
+            'work environment inherent risk atmosphere contamination': '',
+            'work environment residual risk atmosphere contamination': '',
         }
     })
 

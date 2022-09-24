@@ -8,23 +8,7 @@ const Planning = ({
   setPlanningChecked,
   planningRadioClicked,
   setPlanningRadioClicked,
-  planning1stSliderValue,
-  setPlanning1stSliderValue,
-  planning2ndSliderValue,
-  setPlanning2ndSliderValue,
 }) => {
-
-  const planning1stSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setPlanning1stSliderValue(newValue);
-    }
-  };
-
-  const planning2ndSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setPlanning2ndSliderValue(newValue);
-    }
-  };
 
   return (
     <Box
@@ -67,14 +51,14 @@ const Planning = ({
                       radioBotText = ''
                       slider1Title='Inherent Risk Rating - (Presence of hazardous material - Lead and / or Asbestos)'
                       name1='planning inherent risk taking lead/asbestos'
-                      firstSliderValue={planning1stSliderValue}
-                      firstSliderHandleChange={planning1stSliderHandleChange}
+                      // firstSliderValue={planning1stSliderValue}
+                      // firstSliderHandleChange={planning1stSliderHandleChange}
                       betweenQ='How will the hazards and risk be controlled?'
                       betweenText='Review site hazardous materials register, follow internal safe work processes and practices for working with or surrounding these materials'
                       slider2Title='Residual Risk Rating - (Presence of Hazardous materials)'
                       name2='planning residual risk taking Hazardous materials'
-                      secondSliderValue={planning2ndSliderValue}
-                      secondSliderHandleChange={planning2ndSliderHandleChange}
+                      // secondSliderValue={planning2ndSliderValue}
+                      // secondSliderHandleChange={planning2ndSliderHandleChange}
                     />
                   </Box>
                 </Box>

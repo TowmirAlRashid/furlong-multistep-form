@@ -10,14 +10,14 @@ const RadioAndSliderComp = ({
   trueCheck,
   slider1Title,
   name1,
-  firstSliderValue,
-  firstSliderHandleChange,
+  // firstSliderValue,
+  // firstSliderHandleChange,
   betweenQ,
   betweenText,
   slider2Title,
   name2,
-  secondSliderValue,
-  secondSliderHandleChange,
+  // secondSliderValue,
+  // secondSliderHandleChange,
   radioBotQ,
   radioBotText
 }) => {
@@ -88,15 +88,15 @@ const RadioAndSliderComp = ({
                 name={name1}
                 render={({ field }) => (
                   <StyledSlider
-                    value={firstSliderValue}
+                    // value={firstSliderValue}
                     min={0}
                     step={1}
                     max={4}
                     scale={calculatevalue}
-                    onChange={firstSliderHandleChange}
+                    onChange={(_, value) => field.onChange(value)}
                     valueLabelDisplay="auto"
                     aria-labelledby="non-linear-slider"
-                    key={`slider-${firstSliderValue}`}
+                    // key={`slider-${firstSliderValue}`}
                     marks={marks}
                     {...field}
                   />
@@ -127,15 +127,15 @@ const RadioAndSliderComp = ({
                     name={name2}
                     render={({ field }) => (
                       <StyledSlider
-                        value={secondSliderValue}
+                        // value={secondSliderValue}
                         min={0}
                         step={1}
                         max={4}
                         scale={calculatevalue}
-                        onChange={secondSliderHandleChange}
+                        onChange={(_, value) => field.onChange(value)}
                         valueLabelDisplay="auto"
                         aria-labelledby="non-linear-slider"
-                        key={`slider-${secondSliderValue}`}
+                        // key={`slider-${secondSliderValue}`}
                         marks={marks}
                         {...field}
                       />

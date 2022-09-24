@@ -7,22 +7,7 @@ const Noise = ({
   setNoiseChecked,
   noiseRadioClicked,
   setNoiseRadioClicked,
-  noise1stSliderValue,
-  setNoise1stSliderValue,
-  noise2ndSliderValue,
-  setNoise2ndSliderValue
 }) => {
-  const noise1stSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setNoise1stSliderValue(newValue);
-    }
-  };
-
-  const noise2ndSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setNoise2ndSliderValue(newValue);
-    }
-  };
 
   return (
     <Box sx={{
@@ -61,14 +46,10 @@ const Noise = ({
                       radioBotText='Use of hearing protection when operating noisy plant and equipment - inline with manufacturers recommendations .'
                       slider1Title='Inherent Risk Rating'
                       name1='noise inherent risk taking'
-                      firstSliderValue={noise1stSliderValue}
-                      firstSliderHandleChange={noise1stSliderHandleChange}
                       betweenQ=''
                       betweenText=''
                       slider2Title='Residual Risk Rating'
                       name2='noise residual risk taking'
-                      secondSliderValue={noise2ndSliderValue}
-                      secondSliderHandleChange={noise2ndSliderHandleChange}
                     />
                   </Box>
                 </Box>

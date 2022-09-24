@@ -7,18 +7,10 @@ const WorkSite = ({
   setTopChecked, 
   topRadioClicked, 
   setTopRadioClicked, 
-  topSliderValue, 
-  setTopSliderValue,
-  top2ndSliderValue,
-  setTop2ndSliderValue, 
   bottomChecked, 
   setBottomChecked, 
   bottomRadioClicked, 
-  setBottomRadioClicked, 
-  bottom1stSliderValue, 
-  setBottom1stSliderValue,
-  bottom2ndSliderValue,
-  setBottom2ndSliderValue
+  setBottomRadioClicked,
  }) => {
   
 
@@ -27,30 +19,6 @@ const WorkSite = ({
   const calculatevalue = (value) => {
     return value;
   }
-
-  const top1stSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setTopSliderValue(newValue);
-    }
-  };
-
-  const top2ndSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setTop2ndSliderValue(newValue);
-    }
-  };
-
-  const bottom1stSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setBottom1stSliderValue(newValue);
-    }
-  };
-
-  const bottom2ndSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setBottom2ndSliderValue(newValue);
-    }
-  };
 
   const StyledSlider = styled(Slider)(
     ({ theme }) => `
@@ -137,15 +105,15 @@ const WorkSite = ({
                               name='worksite inherent risk taking'
                               render={({ field }) => (
                                 <StyledSlider
-                                  value={topSliderValue}
+                                  // value={topSliderValue}
                                   min={0}
                                   step={1}
                                   max={4}
                                   scale={calculatevalue}
-                                  onChange={top1stSliderHandleChange}
+                                  onChange={(_, value) => field.onChange(value)}
                                   valueLabelDisplay="auto"
                                   aria-labelledby="non-linear-slider"
-                                  key={`slider-${topSliderValue}`}
+                                  // key={`slider-${topSliderValue}`}
                                   marks={marks}
                                   {...field}
                                 />
@@ -186,15 +154,15 @@ const WorkSite = ({
                                   name='worksite residual risk taking'
                                   render={({ field }) => (
                                     <StyledSlider
-                                      value={top2ndSliderValue}
+                                      // value={top2ndSliderValue}
                                       min={0}
                                       step={1}
                                       max={4}
                                       scale={calculatevalue}
-                                      onChange={top2ndSliderHandleChange}
+                                      onChange={(_, value) => field.onChange(value)}
                                       valueLabelDisplay="auto"
                                       aria-labelledby="non-linear-slider"
-                                      key={`slider-${top2ndSliderValue}`}
+                                      // key={`slider-${top2ndSliderValue}`}
                                       marks={marks}
                                       {...field}
                                     />
@@ -257,15 +225,15 @@ const WorkSite = ({
                               name='worksite inherent risk taking dermatitis'
                               render={({ field }) => (
                                 <StyledSlider
-                                  value={bottom1stSliderValue}
+                                  // value={bottom1stSliderValue}
                                   min={0}
                                   step={1}
                                   max={4}
                                   scale={calculatevalue}
-                                  onChange={bottom1stSliderHandleChange}
+                                  onChange={(_, value) => field.onChange(value)}
                                   valueLabelDisplay="auto"
                                   aria-labelledby="non-linear-slider"
-                                  key={`slider-${bottom1stSliderValue}`}
+                                  // key={`slider-${bottom1stSliderValue}`}
                                   marks={marks}
                                   {...field}
                                 />
@@ -294,15 +262,15 @@ const WorkSite = ({
                                   name='worksite residual risk taking dermatitis'
                                   render={({ field }) => (
                                     <StyledSlider
-                                      value={bottom2ndSliderValue}
+                                      // value={bottom2ndSliderValue}
                                       min={0}
                                       step={1}
                                       max={4}
                                       scale={calculatevalue}
-                                      onChange={bottom2ndSliderHandleChange}
+                                      onChange={(_, value) => field.onChange(value)}
                                       valueLabelDisplay="auto"
                                       aria-labelledby="non-linear-slider"
-                                      key={`slider-${bottom2ndSliderValue}`}
+                                      // key={`slider-${bottom2ndSliderValue}`}
                                       marks={marks}
                                       {...field}
                                     />

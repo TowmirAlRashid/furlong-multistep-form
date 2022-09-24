@@ -19,87 +19,7 @@ const Transporting = ({
   setTransportingBottom1stRadioClicked,
   transportingBottom2ndRadioClicked,
   setTransportingBottom2ndRadioClicked,
-  transportTop1st1stSliderValue,
-  setTransportTop1st1stSliderValue,
-  transportTop1st2ndSliderValue,
-  setTransportTop1st2ndSliderValue,
-  transportTop2nd1stSliderValue,
-  setTransportTop2nd1stSliderValue,
-  transportTop2nd2ndSliderValue,
-  setTransportTop2nd2ndSliderValue,
-  transportMiddle1stSliderValue,
-  setTransportMiddle1stSliderValue,
-  transportMiddle2ndSliderValue,
-  setTransportMiddle2ndSliderValue,
-  transportBottom1st1stSliderValue,
-  setTransportBottom1st1stSliderValue,
-  transportBottom1st2ndSliderValue,
-  setTransportBottom1st2ndSliderValue,
-  transportBottom2nd1stSliderValue,
-  setTransportBottom2nd1stSliderValue,
-  transportBottom2nd2ndSliderValue,
-  setTransportBottom2nd2ndSliderValue
 }) => {
-
-  const transportTop1st1stSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setTransportTop1st1stSliderValue(newValue);
-    }
-  };
-
-  const transportTop1st2ndSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setTransportTop1st2ndSliderValue(newValue);
-    }
-  };
-
-  const transportTop2nd1stSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setTransportTop2nd1stSliderValue(newValue);
-    }
-  };
-
-  const transportTop2nd2ndSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setTransportTop2nd2ndSliderValue(newValue);
-    }
-  };
-
-  const transportMiddle1stSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setTransportMiddle1stSliderValue(newValue);
-    }
-  };
-
-  const transportMiddle2ndSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setTransportMiddle2ndSliderValue(newValue);
-    }
-  };
-
-  const transportBottom1st1stSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setTransportBottom1st1stSliderValue(newValue);
-    }
-  };
-
-  const transportBottom1st2ndSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setTransportBottom1st2ndSliderValue(newValue);
-    }
-  };
-
-  const transportBottom2nd1stSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setTransportBottom2nd1stSliderValue(newValue);
-    }
-  };
-
-  const transportBottom2nd2ndSliderHandleChange = (event, newValue) => {
-    if (typeof newValue === 'number') {
-      setTransportBottom2nd2ndSliderValue(newValue);
-    }
-  };
 
   return (
     <Box sx={{
@@ -140,14 +60,10 @@ const Transporting = ({
                       radioBotText=''
                       slider1Title='Inherent Risks - Unsecured hazardous material container in vehicles'
                       name1='transporting inherent risk unsecured container'
-                      firstSliderValue={transportTop1st1stSliderValue}
-                      firstSliderHandleChange={transportTop1st1stSliderHandleChange}
                       betweenQ='How will the hazards and risk be controlled?'
                       betweenText='All lids securely fastened and materials securely fastened in vehicles'
                       slider2Title='Residual Risk'
                       name2='transporting unsecured container residual risk'
-                      secondSliderValue={transportTop1st2ndSliderValue}
-                      secondSliderHandleChange={transportTop1st2ndSliderHandleChange}
                     />
 
                     <RadioAndSliderComp
@@ -160,14 +76,10 @@ const Transporting = ({
                       radioBotText='Prevent contamination to sewers, drains and waterways and zero waste to ground.'
                       slider1Title='Inherent Risk Rating'
                       name1='transporting inherent risk taking'
-                      firstSliderValue={transportTop2nd1stSliderValue}
-                      firstSliderHandleChange={transportTop2nd1stSliderHandleChange}
                       betweenQ=''
                       betweenText=''
                       slider2Title='Residual Risk Rating'
                       name2='transporting residual risk taking'
-                      secondSliderValue={transportTop2nd2ndSliderValue}
-                      secondSliderHandleChange={transportTop2nd2ndSliderHandleChange}
                     />
                   </Box>
                 </Box>
@@ -199,14 +111,10 @@ const Transporting = ({
                       radioBotText='Fixed barrier between driver cabin and storage area of the vehicle'
                       slider1Title='Inherent Risk Rating'
                       name1='transporting inherent risk taking flying objects'
-                      firstSliderValue={transportMiddle1stSliderValue}
-                      firstSliderHandleChange={transportMiddle1stSliderHandleChange}
                       betweenQ=''
                       betweenText=''
                       slider2Title='Residual Risk Rating'
                       name2='transporting residual risk taking flying objects'
-                      secondSliderValue={transportMiddle2ndSliderValue}
-                      secondSliderHandleChange={transportMiddle2ndSliderHandleChange}
                     />
                   </Box>
                 </Box>
@@ -238,14 +146,10 @@ const Transporting = ({
                       radioBotText='Minimize horizontal overhang of ladders and planks. Tie a red flag (at least 300mm x 300mm) on the end of any ladder / plank that extends beyond the rear of the vehicle'
                       slider1Title='Inherent Risk Rating'
                       name1='transporting inherent risk taking securing ladders'
-                      firstSliderValue={transportBottom1st1stSliderValue}
-                      firstSliderHandleChange={transportBottom1st1stSliderHandleChange}
                       betweenQ=''
                       betweenText=''
                       slider2Title='Residual Risk Rating'
                       name2='transporting residual risk taking securing ladders'
-                      secondSliderValue={transportBottom1st2ndSliderValue}
-                      secondSliderHandleChange={transportBottom1st2ndSliderHandleChange}
                     />
 
                     <RadioAndSliderComp
@@ -258,14 +162,10 @@ const Transporting = ({
                       radioBotText='Install securing points for ladders, planks to minimal movement and vibration'
                       slider1Title='Inherent Risk Rating'
                       name1='transporting inherent risk taking securing points'
-                      firstSliderValue={transportBottom2nd1stSliderValue}
-                      firstSliderHandleChange={transportBottom2nd1stSliderHandleChange}
                       betweenQ=''
                       betweenText=''
                       slider2Title='Residual Risk Rating'
                       name2='transporting residual risk taking securing points'
-                      secondSliderValue={transportBottom2nd2ndSliderValue}
-                      secondSliderHandleChange={transportBottom2nd2ndSliderHandleChange}
                     />
                   </Box>
                 </Box>
