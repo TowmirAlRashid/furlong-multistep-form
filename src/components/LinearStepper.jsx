@@ -124,6 +124,17 @@ const LinearStepper = () => {
     const [area9thRadioClicked, setArea9thRadioClicked] = useState('no')
     const [area10thRadioClicked, setArea10thRadioClicked] = useState('no')
 
+    //surface preparation component steps - 5
+    const [surface1stChecked, setSurface1stChecked] = useState(false)
+    const [surface2ndChecked, setSurface2ndChecked] = useState(false)
+    const [surface3rdChecked, setSurface3rdChecked] = useState(false)
+    const [surface4thChecked, setSurface4thChecked] = useState(false)
+
+    const [surface1stRadioClicked, setSurface1stRadioClicked] = useState('no')
+    const [surface2ndRadioClicked, setSurface2ndRadioClicked] = useState('no')
+    const [surface3rdRadioClicked, setSurface3rdRadioClicked] = useState('no')
+    const [surface4thRadioClicked, setSurface4thRadioClicked] = useState('no')
+
 
 
     const getStepContent = (step) => {
@@ -223,7 +234,25 @@ const LinearStepper = () => {
                     setArea10thRadioClicked={setArea10thRadioClicked}
                 />
             case 5:
-                return <SurfacePrep />
+                return <SurfacePrep 
+                    surface1stChecked={surface1stChecked}
+                    setSurface1stChecked={setSurface1stChecked}
+                    surface2ndChecked={surface2ndChecked}
+                    setSurface2ndChecked={setSurface2ndChecked}
+                    surface3rdChecked={surface3rdChecked}
+                    setSurface3rdChecked={setSurface3rdChecked}
+                    surface4thChecked={surface4thChecked}
+                    setSurface4thChecked={setSurface4thChecked}
+
+                    surface1stRadioClicked={surface1stRadioClicked}
+                    setSurface1stRadioClicked={setSurface1stRadioClicked}
+                    surface2ndRadioClicked={surface2ndRadioClicked}
+                    setSurface2ndRadioClicked={setSurface2ndRadioClicked}
+                    surface3rdRadioClicked={surface3rdRadioClicked}
+                    setSurface3rdRadioClicked={setSurface3rdRadioClicked}
+                    surface4thRadioClicked={surface4thRadioClicked}
+                    setSurface4thRadioClicked={setSurface4thRadioClicked}
+                />
             case 6:
                 return <Noise 
                     noiseChecked={noiseChecked}
@@ -390,6 +419,14 @@ const LinearStepper = () => {
             'areaSetup residual risk Falls from access equipment': "",
             'areaSetup inherent risk Falls from powered access equipment': "",
             'areaSetup residual risk Falls from powered access equipment': "",
+            'surface preparation inherent risk Electric shock injury': "",
+            'surface preparation residual risk Electric shock injury': "",
+            'surface preparation inherent risk steel extension handles': "",
+            'surface preparation residual risk steel extension handles': "",
+            'surface preparation inherent risk Overhead Power Lines': "",
+            'surface preparation residual risk Overhead Power Lines': "",
+            'surface preparation inherent risk Serious head injuries': "",
+            'surface preparation residual risk Serious head injuries': "",
         }
     })
 
