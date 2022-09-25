@@ -10,16 +10,14 @@ const RadioAndSliderComp = ({
   trueCheck,
   slider1Title,
   name1,
-  // firstSliderValue,
-  // firstSliderHandleChange,
   betweenQ,
   betweenText,
   slider2Title,
   name2,
-  // secondSliderValue,
-  // secondSliderHandleChange,
   radioBotQ,
-  radioBotText
+  radioBotSubQ,
+  radioBotText,
+  radioBotNote
 }) => {
   const { control } = useFormContext; 
 
@@ -69,9 +67,15 @@ const RadioAndSliderComp = ({
       {
         trueCheck && radioGetter === 'yes' && (
           <Box sx={{ m: '2rem 0 0'}}>
+            <Box>
+              <Typography sx={{
+                fontWeight: 'bold', color: 'rgb(25, 118, 210)'
+              }}>{radioBotQ} <span style={{ fontWeight: 'bold', color: 'black'}}>{radioBotSubQ}</span></Typography>
+            </Box>
+
             <Typography sx={{
-              fontWeight: 'bold', color: 'rgb(25, 118, 210)'
-            }}>{radioBotQ}</Typography>
+              m: '1rem 0 1rem'
+            }}>{radioBotNote}</Typography>
 
             <Box sx={{
               m: '1rem 0',

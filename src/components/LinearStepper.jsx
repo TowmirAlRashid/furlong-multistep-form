@@ -97,6 +97,33 @@ const LinearStepper = () => {
     const [electricMiddleRadioClicked, setElectricMiddleRadioClicked] = useState('no')
     const [electricBottomRadioClicked, setElectricBottomRadioClicked] = useState('no')
 
+    //area setup component states - 4
+    const [area1stChecked, setArea1stChecked] = useState(false)
+    const [area2ndChecked, setArea2ndChecked] = useState(false)
+    const [area3rdChecked, setArea3rdChecked] = useState(false)
+    const [area4thChecked, setArea4thChecked] = useState(false)
+    const [area5thChecked, setArea5thChecked] = useState(false)
+    const [area6thChecked, setArea6thChecked] = useState(false)
+    const [area7thChecked, setArea7thChecked] = useState(false)
+    const [area8thChecked, setArea8thChecked] = useState(false)
+    const [area9thChecked, setArea9thChecked] = useState(false)
+    const [area10thChecked, setArea10thChecked] = useState(false)
+
+    const [area1st1stRadioClicked, setArea1st1stRadioClicked] = useState('no')
+    const [area1st2ndRadioClicked, setArea1st2ndRadioClicked] = useState('no')
+    const [area2ndRadioClicked, setArea2ndRadioClicked] = useState('no')
+    const [area3rd1stRadioClicked, setArea3rd1stRadioClicked] = useState('no')
+    const [area3rd2ndRadioClicked, setArea3rd2ndRadioClicked] = useState('no')
+    const [area3rd3rdRadioClicked, setArea3rd3rdRadioClicked] = useState('no')
+    const [area4thRadioClicked, setArea4thRadioClicked] = useState('no')
+    const [area5thRadioClicked, setArea5thRadioClicked] = useState('no')
+    const [area6thRadioClicked, setArea6thRadioClicked] = useState('no')
+    const [area7th1stRadioClicked, setArea7th1stRadioClicked] = useState('no')
+    const [area7th2ndRadioClicked, setArea7th2ndRadioClicked] = useState('no')
+    const [area8thRadioClicked, setArea8thRadioClicked] = useState('no')
+    const [area9thRadioClicked, setArea9thRadioClicked] = useState('no')
+    const [area10thRadioClicked, setArea10thRadioClicked] = useState('no')
+
 
 
     const getStepContent = (step) => {
@@ -144,7 +171,57 @@ const LinearStepper = () => {
                     setTransportingBottom2ndRadioClicked={setTransportingBottom2ndRadioClicked}
                 />
             case 4:
-                return <AreaSetup />
+                return <AreaSetup 
+                    area1stChecked={area1stChecked}
+                    setArea1stChecked={setArea1stChecked}
+                    area2ndChecked={area2ndChecked}
+                    setArea2ndChecked={setArea2ndChecked}
+                    area3rdChecked={area3rdChecked}
+                    setArea3rdChecked={setArea3rdChecked}
+                    area4thChecked={area4thChecked}
+                    setArea4thChecked={setArea4thChecked}
+                    area5thChecked={area5thChecked}
+                    setArea5thChecked={setArea5thChecked}
+                    area6thChecked={area6thChecked}
+                    setArea6thChecked={setArea6thChecked}
+                    area7thChecked={area7thChecked}
+                    setArea7thChecked={setArea7thChecked}
+                    area8thChecked={area8thChecked}
+                    setArea8thChecked={setArea8thChecked}
+                    area9thChecked={area9thChecked}
+                    setArea9thChecked={setArea9thChecked}
+                    area10thChecked={area10thChecked}
+                    setArea10thChecked={setArea10thChecked}
+
+                    area1st1stRadioClicked={area1st1stRadioClicked}
+                    setArea1st1stRadioClicked={setArea1st1stRadioClicked}
+                    area1st2ndRadioClicked={area1st2ndRadioClicked}
+                    setArea1st2ndRadioClicked={setArea1st2ndRadioClicked}
+                    area2ndRadioClicked={area2ndRadioClicked}
+                    setArea2ndRadioClicked={setArea2ndRadioClicked}
+                    area3rd1stRadioClicked={area3rd1stRadioClicked}
+                    setArea3rd1stRadioClicked={setArea3rd1stRadioClicked}
+                    area3rd2ndRadioClicked={area3rd2ndRadioClicked}
+                    setArea3rd2ndRadioClicked={setArea3rd2ndRadioClicked}
+                    area3rd3rdRadioClicked={area3rd3rdRadioClicked}
+                    setArea3rd3rdRadioClicked={setArea3rd3rdRadioClicked}
+                    area4thRadioClicked={area4thRadioClicked}
+                    setArea4thRadioClicked={setArea4thRadioClicked}
+                    area5thRadioClicked={area5thRadioClicked}
+                    setArea5thRadioClicked={setArea5thRadioClicked}
+                    area6thRadioClicked={area6thRadioClicked}
+                    setArea6thRadioClicked={setArea6thRadioClicked}
+                    area7th1stRadioClicked={area7th1stRadioClicked}
+                    setArea7th1stRadioClicked={setArea7th1stRadioClicked}
+                    area7th2ndRadioClicked={area7th2ndRadioClicked}
+                    setArea7th2ndRadioClicked={setArea7th2ndRadioClicked}
+                    area8thRadioClicked={area8thRadioClicked}
+                    setArea8thRadioClicked={setArea8thRadioClicked}
+                    area9thRadioClicked={area9thRadioClicked}
+                    setArea9thRadioClicked={setArea9thRadioClicked}
+                    area10thRadioClicked={area10thRadioClicked}
+                    setArea10thRadioClicked={setArea10thRadioClicked}
+                />
             case 5:
                 return <SurfacePrep />
             case 6:
@@ -285,6 +362,34 @@ const LinearStepper = () => {
             'electrical residual risk steel extension': "",
             'electrical inherent risk power overhead': '',
             'electrical residual risk power overhead': '',
+            'areaSetup inherent risk repeatitive work': '',
+            'areaSetup residual risk repeatitive work': '',
+            'areaSetup inherent risk Physical manoeuvring': '',
+            'areaSetup residual risk Physical manoeuvring': "",
+            'areaSetup inherent risk Ignition sources': "",
+            'areaSetup residual risk Ignition sources': "",
+            'areaSetup inherent risk general public': "",
+            'areaSetup residual risk general public': "",
+            'areaSetup inherent risk vehicle parking': '',
+            'areaSetup residual risk vehicle parking': '',
+            'areaSetup inherent risk Traffic hazards': "",
+            'areaSetup residual risk Traffic hazards': "",
+            'areaSetup inherent risk Worksite Traffic Hazards': '',
+            'areaSetup residual risk Worksite Traffic Hazards': "",
+            'areaSetup inherent risk Spray Gun injury': "",
+            'areaSetup residual risk Spray Gun injury': "",
+            'areaSetup inherent risk trips and falls': '',
+            'areaSetup residual risk trips and falls': "",
+            'areaSetup inherent risk accessing height equipment': "",
+            'areaSetup residual risk accessing height equipment': "",
+            'areaSetup inherent risk Certification/Competencies': "",
+            'areaSetup residual risk Certification/Competencies': "",
+            'areaSetup inherent risk Falls from Ladder': "",
+            'areaSetup residual risk Falls from Ladder': "",
+            'areaSetup inherent risk Falls from access equipment': "",
+            'areaSetup residual risk Falls from access equipment': "",
+            'areaSetup inherent risk Falls from powered access equipment': "",
+            'areaSetup residual risk Falls from powered access equipment': "",
         }
     })
 
