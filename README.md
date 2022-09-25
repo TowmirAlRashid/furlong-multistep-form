@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can [See live](https://timely-concha-770844.netlify.app/).
 
 ## Available Scripts
 
