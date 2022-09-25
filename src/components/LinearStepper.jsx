@@ -320,7 +320,10 @@ const LinearStepper = () => {
             case 11:
                 return <Submission />
             default:
-                return 'Unknown Step'
+                return <Typography sx={{
+                    m: '2rem 0 2rem',
+                    textAlign: 'center'
+                }}>Thank You!</Typography>
         }
     }
 
@@ -427,6 +430,15 @@ const LinearStepper = () => {
             'surface preparation residual risk Overhead Power Lines': "",
             'surface preparation inherent risk Serious head injuries': "",
             'surface preparation residual risk Serious head injuries': "",
+            "submit name 1": "",
+            "signature 1": "",
+            "date 1": '',
+            'submit name 2': '',
+            'signature 2': '',
+            'date 2': '',
+            'submit name 3': '',
+            'signature 3': '',
+            'date 3': ''
         }
     })
 
@@ -562,7 +574,7 @@ const LinearStepper = () => {
                                     }}
                                     onClick={handleComplete}
                                 >
-                                    {activeStep === steps.length - 1 ? "Finish" : "Next"}
+                                    {activeStep === steps.length - 1 ? "Submit" : "Next"}
                                 </Button>
                             </Box>
                         </form>
